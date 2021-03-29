@@ -1,0 +1,3 @@
+DbDriver: "sqlite3"
+#DbDataSource: ":memory:"
+DbDataSource: "/tmp/scapo.db"

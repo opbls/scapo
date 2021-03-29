@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  api:
+    container_name: go
+    image: scapo:latest
+    build:
+      context: .
+      target: build_api
+      dockerfile: ./Dockerfile
+    ports:
+      - 18080:18080
+      - 18081:18081
+    tty: true
+    volumes:
+      - .:/go/app
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE

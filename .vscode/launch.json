@@ -1,0 +1,16 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Remote",
+            "type": "go",
+            "request": "launch",
+            "mode": "remote",
+            "program": "${workspaceFolder}",
+            "port": 18081,
+            "host": "127.0.0.1",
+            "showLog": true,
+        }
+    ]
+}

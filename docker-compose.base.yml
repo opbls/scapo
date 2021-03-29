@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  api:
+    container_name: go
+    image: scapo_base:latest
+    build:
+      context: .
+      target: build_api
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/go/app
