@@ -7,9 +7,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/deepmap/oapi-codegen/examples/petstore-expanded/chi/api"
-	middleware "github.com/deepmap/oapi-codegen/pkg/chi-middleware"
-	"github.com/deepmap/oapi-codegen/pkg/testutil"
+	middleware "github.com/oapi-codegen/nethttp-middleware"
+	"github.com/oapi-codegen/testutil"
 	"github.com/go-chi/chi/v5"
 	"github.com/jmoiron/sqlx"
 	"github.com/opbls/scapo/petstore/delivery"
@@ -239,7 +238,7 @@ func TestHandler(t *testing.T) {
 		// slice update
 		petData = petData[:-1+len(petData)]
 
-		var rp []api.Pet
+		var rp []openapi.Pet
 		url = fmt.Sprintf("/pets")
 		rr = testutil.NewRequest().Get(url).WithAcceptJson().GoWithHTTPHandler(t, r).Recorder
 		assert.Equal(t, http.StatusOK, rr.Code)
