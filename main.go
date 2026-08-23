@@ -12,7 +12,7 @@ import (
 	"github.com/jmoiron/sqlx"
 	"gopkg.in/yaml.v2"
 
-	middleware "github.com/deepmap/oapi-codegen/pkg/chi-middleware"
+	middleware "github.com/oapi-codegen/nethttp-middleware"
 	"github.com/opbls/scapo/petstore/delivery"
 	"github.com/opbls/scapo/petstore/openapi"
 	"github.com/opbls/scapo/petstore/repository"
